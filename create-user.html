@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Create User</title>
+</head>
+<body>
+  <aside>
+    <nav>
+      <ul>
+        <li><a href="/" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="/tasks"><i class="fas fa-tasks"></i> Tasks</a></li>
+        <li><a href="/team"><i class="fas fa-users"></i> Team</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main>
+       <header>
+        <h1>Add User</h1>
+      </header>
+    
+      <form id="project-form" method="post" action="">
+        <div class="form-group">
+          <label for="firstname">Firstname</label>
+          <input type="text" id="firstname" name="firstname" required>
+        </div>
+        <div class="form-group">
+          <label for="lastname">Lastname</label>
+          <input type="text" id="lastname" name="lastname" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="role">Role</label>
+          <input type="text" id="role" name="role" required>
+        </div>
+        <button type="submit">Add</button>
+        <button type="button" id="cancel-project-btn">Cancel</button>
+
+      </form>
+    
+      <script src="script.js"></script>
+  </main>
+</body>
+</html>

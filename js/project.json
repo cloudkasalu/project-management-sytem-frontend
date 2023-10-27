@@ -1,0 +1,67 @@
+[
+    {
+    "project_id": 1,
+    "project_name": "Project Management System",
+    "description": "for the kids",
+    "start_date": "2023-06-18",
+    "end_date": null,
+    "milestones": {
+    "1": {
+    "milestone_id": 1,
+    "milestone_name": "Create Progress Tracking ",
+    "description": "Able to track progress according to do's",
+    "due_date": "2023-06-19",
+    "tasks": [
+    {
+    "task_id": 1,
+    "task_name": "Collect Form Handling",
+    "description": "get the details ",
+    "status": 1,
+    "assigned_to": 1,
+    "due_date": "2023-06-19"
+    },
+    {
+    "task_id": 2,
+    "task_name": "Collect Form Handling 2",
+    "description": "ger",
+    "status": 1,
+    "assigned_to": 1,
+    "due_date": "2023-06-21"
+    }
+    ]
+    },
+    "3": {
+    "milestone_id": 3,
+    "milestone_name": "Create Progress Tracking 2",
+    "description": "ygyi",
+    "due_date": "2023-06-21",
+    "tasks": [
+    {
+    "task_id": 4,
+    "task_name": "Collect Form Handling 3",
+    "description": "tuygugiu",
+    "status": 1,
+    "assigned_to": 1,
+    "due_date": "2023-06-22"
+    }
+    ]
+    },
+    "4": {
+    "milestone_id": 4,
+    "milestone_name": "Create Progress Tracking example",
+    "description": "yo",
+    "due_date": "2023-08-26",
+    "tasks": [
+    {
+    "task_id": null,
+    "task_name": null,
+    "description": null,
+    "status": null,
+    "assigned_to": null,
+    "due_date": null
+    }
+    ]
+    }
+    }
+    }
+    ]

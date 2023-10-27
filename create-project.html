@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="form-page">
+        <nav>
+            <a href="/" class="return">
+                <i class="fas fa-chevron-left"></i>
+                return
+            </a>
+        </nav>
+        <main>
+            <form action="" method="post">
+
+                <div class="form-header">
+                    <h2>Create Project</h2>
+                </div>
+                <div class="form-field">
+                    <label for="name">Project Name</label>
+                    <input type="text" name="name" placeholder="Project Name" id="name">
+                </div>
+                <div class="form-field">
+                    <label for="date">Due Date</label>
+                    <input type="date" name="date" id="date">
+                </div>
+                <div class="form-field">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" cols="30" rows="5">Project Description</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Project</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
