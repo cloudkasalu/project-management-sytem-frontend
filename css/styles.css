@@ -1,21 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* Common styles for both pages */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  --primary-color: #141466;
+  --primary-color: #0047FD;
   --secondary-color: #2929cc;
   --accent-color: #6677cc;
   --background-color: #dadae6;
   --text-color:#ffffff;
-}
-
-/* Common styles for both pages */
-* {
-  box-sizing: border-box;
+  --white-color:#ffffff;
+  --dark-color: #000000;
+  --box-shadow: 0px 1px 4px 0px rgba(73, 80, 87, 0.10);
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
 }
 
 ul {
@@ -29,11 +32,11 @@ a {
 }
 
 i {
-  color: var(--primary-color);
+  color: var(--dark-color);
 }
 
 h1, h2, h3, h4, h5 {
-  color: var(--primary-color);
+  color: var(--dark-color);
   margin: 0;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -95,14 +98,37 @@ input, textarea, select {
   font-size: 15px;
 }
 
-.app main {
+.app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
 }
+.app main {
+  width: 80%;
+}
+.app main > section {
+  padding: 0 2rem;
+  background-color: #f8f8f8;
+  height: calc(100vh - 80px);
+  overflow: scroll;
+  padding-bottom: 3rem;
+}
 .app aside {
   width: 20%;
+  height: 100vh;
   box-shadow: 0px 0px 25px rgba(73, 80, 87, 0.1);
-  background-color: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.app aside .logo {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding-left: 2rem;
+  font-size: 28px;
+  font-weight: 600;
 }
 .app aside nav {
   margin-top: 2rem;
@@ -112,25 +138,23 @@ input, textarea, select {
   margin-left: 2rem;
   font-size: 14px;
 }
+.app aside nav ul li:first-of-type {
+  margin-top: 1rem;
+}
 .app aside nav ul li a {
-  padding: 1rem 0;
-  display: block;
+  padding: 1.2rem 0;
+  display: flex;
+  align-items: center;
   padding-left: 2rem;
 }
 .app aside nav ul li a.active {
-  background-color: #F9F9FA;
+  background-color: rgba(2, 89, 189, 0.4117647059);
 }
 .app aside nav ul li a:hover {
-  background-color: #F9F9FA;
+  background-color: rgba(2, 89, 189, 0.4117647059);
 }
-.app aside nav ul li a i {
-  font-size: 17px;
+.app aside nav ul li a .nav-icon {
   margin-right: 0.7rem;
-}
-.app section {
-  padding: 2rem;
-  width: 80%;
-  background-color: #f8f8f8;
 }
 
 .top-navbar {
@@ -140,15 +164,6 @@ input, textarea, select {
   width: 100%;
   height: 80px;
   padding: 0 2rem;
-  background-color: #2929cc;
-}
-.top-navbar .logo {
-  display: flex;
-  align-items: center;
-  height: 70px;
-  padding-left: 2rem;
-  font-size: 28px;
-  font-weight: 600;
 }
 .top-navbar .top-navbar-right {
   display: flex;
@@ -169,14 +184,20 @@ input, textarea, select {
   border-radius: 100%;
 }
 
+.main-header {
+  padding-top: 2rem;
+}
+
 .main-content {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   -moz-column-gap: 2rem;
        column-gap: 2rem;
 }
 .main-content .content-container {
-  width: 70%;
+  width: 100%;
+  max-width: 625px;
 }
 .main-content .content-container .projects-grid {
   display: grid;
@@ -188,20 +209,21 @@ input, textarea, select {
   flex-direction: column;
   justify-content: space-evenly;
   border-radius: 10px;
+  background-color: var(--white-color);
   height: 148px;
   padding: 1rem;
-  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
 }
 .main-content .aside-container {
-  width: 27%;
-  padding-right: 2rem;
+  width: 30%;
 }
 .main-content .aside-container .team-view {
+  background-color: rgba(61, 137, 223, 0.1803921569);
   padding: 1rem;
   border-radius: 10px;
   width: 100%;
   height: 350px;
-  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
 }
 
 .project-details .period {
@@ -225,6 +247,107 @@ input, textarea, select {
   height: 100%;
   border-radius: 15px;
   background-color: var(--primary-color);
+}
+
+.content-modal {
+  margin-top: 2rem;
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  padding: 1.5rem 1.333rem;
+}
+
+.tasks-list .task-grid {
+  margin-top: 1rem;
+  width: 100%;
+  align-items: center;
+  padding: 0.8rem 0;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr;
+  border-bottom: 1px solid #D9D9D9;
+}
+.tasks-list .task-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.tasks-list .project-tag {
+  color: #D9D9D9;
+  font-size: 14px;
+}
+.tasks-list .checkbox input {
+  margin: 0;
+  text-align: justify;
+  width: 50px;
+}
+
+.recent-tasks-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #D9D9D9;
+}
+.recent-tasks-item .task-name {
+  font-size: 15px;
+  font-weight: 500;
+}
+.recent-tasks-item .task-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 0.5rem;
+}
+
+.status-button {
+  font-size: 12px;
+  border-radius: 15px;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.status-button.pending {
+  background-color: rgba(0, 72, 253, 0.0862745098);
+  color: #0047FD;
+  width: 80px;
+}
+.status-button.complete {
+  background-color: rgba(42, 167, 0, 0.1176470588);
+  color: #2BA700;
+  width: 80px;
+}
+
+.chat-container {
+  display: flex;
+  justify-content: space-between;
+}
+.chat-container > * {
+  height: 650px;
+  max-height: 90vh;
+}
+.chat-container .chat-list {
+  width: 30%;
+}
+.chat-container .chat-field {
+  border-radius: 5px;
+  width: 65%;
+  margin-top: 2rem;
+  background-color: var(--white-color);
+}
+.chat-container .chat-field .chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #D9D9D9;
+}
+.chat-container .chat-field .chat-header .chat-header-user {
+  display: flex;
+  align-items: center;
+}
+.chat-container .chat-field .chat-header .chat-header-user .user-image {
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-right: 1rem;
 }
 
 .project-container {

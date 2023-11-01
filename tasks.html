@@ -3,11 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
-  <title>Home</title>
+  <title>Dashboard</title>
 </head>
 <body>
+  <div class="app">
+    <aside>
+      <div class="logo">PMS</div>
+      <nav>
+        <ul>
+          <li><a href="/" class="active"> <img src="/images/Category.svg" class="nav-icon" alt="Dashboard"> <span>Dashboard</span></a></li>
+          <li><a href="/tasks.html"> <img src="/images/Tick Square.svg" class="nav-icon" alt="Tasks"> <span>Tasks</span></a></li>
+          <li><a href="/chat.html"> <img src="/images/Chat.svg" class="nav-icon" alt="Chat Icon"> <span>Chat</span></a></li>
+          <li><a href="/team.html"> <img src="/images/User.svg" class="nav-icon" alt="Team"> <span>Team</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <nav>
+        <div class="container">
+          <div class="top-navbar">
+            <div class="top-navbar-left">
+              <div class="search-bar">
+                <input type="text" placeholder="Search">
+              </div>
+            </div>
+            <div class="top-navbar-right">
+              <a href="create-project.html" class="btn btn-primary">Create Project</a>
+              <div class="user-account">
+                <div class="user-image"><div class="image-container"><img src="images/logo.png" alt=""></div></div>
+                <div class="user-name">Cloud</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section>
+        <header class="main-header">
+          <h1>Tasks</h1>
+        </header>
+        <section class="main-content">
+          <div class="content-container">
+            <div class="content-modal due-today">
+              <h3>Due Today</h3>
+              <div class="tasks-list">
+                <div class="task-grid">
+                  <div class="checkbox"><input type="checkbox"></div>
+                  <div class="task-name">Create Project</div>
+                  <div class="project-tag">App Dev</div>
+                  <div class="status">
+                    <div class="status-button pending">pending</div>
+                  </div>
+                </div>
+                <div class="task-grid">
+                  <div class="checkbox"><input type="checkbox"></div>
+                  <div class="task-name">Create Project</div>
+                  <div class="project-tag">App Dev</div>
+                  <div class="status">
+                    <div class="status-button complete">complete</div>
+                  </div>
+                </div>
+                <div class="task-grid">
+                  <div class="checkbox"><input type="checkbox"></div>
+                  <div class="task-name">Create Project</div>
+                  <div class="project-tag">App Dev</div>
+                  <div class="status">
+                    <div class="status-button pending">pending</div>
+                  </div>
+                </div>
+                <div class="task-grid">
+                  <div class="checkbox"><input type="checkbox"></div>
+                  <div class="task-name">Create Project</div>
+                  <div class="project-tag">App Dev</div>
+                  <div class="status">
+                    <div class="status-button pending">pending</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-modal due-today">
+              <h3>Pending Tasks</h3>
+              <div class="tasks-list">
+                <div class="task-grid">
+                  <div class="checkbox"><input type="checkbox"></div>
+                  <div class="task-name">Create Project</div>
+                  <div class="project-tag">App Dev</div>
+                  <div class="status">
+                    <div class="status-button pending">pending</div>
+                  </div>
+                </div>
+                <div class="task-grid">
+                  <div class="checkbox"><input type="checkbox"></div>
+                  <div class="task-name">Create Project</div>
+                  <div class="project-tag">App Dev</div>
+                  <div class="status">
+                    <div class="status-button pending">pending</div>
+                  </div>
+                </div>
+                <div class="task-grid">
+                  <div class="checkbox"><input type="checkbox"></div>
+                  <div class="task-name">Create Project</div>
+                  <div class="project-tag">App Dev</div>
+                  <div class="status">
+                    <div class="status-button pending">pending</div>
+                  </div>
+                </div>
+                <div class="task-grid">
+                  <div class="checkbox"><input type="checkbox"></div>
+                  <div class="task-name">Create Project</div>
+                  <div class="project-tag">App Dev</div>
+                  <div class="status">
+                    <div class="status-button pending">pending</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="aside-container">
+            <div class="content-modal recent-added">
+              <h3>Recent Added</h3>
 
+              <div class="recent-tasks-list">
+                <div class="recent-tasks-item">
+                  <div class="task-name">Task Name Goes Here</div>
+                  <div class="task-details">
+                    <div class="project-tag">App Development</div>
+                    <div class="due-date">03 Nov</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
