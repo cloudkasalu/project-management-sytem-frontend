@@ -9,76 +9,85 @@
 </head>
 <body>
   <div class="app">
-    <aside>
-      <div class="brand">MyPMS</div>
-      <nav>
-        <ul>
-          <li><a href="/" class="active"><i class="fas fa-home"></i>Dashboard</a></li>
-          <li><a href="/tasks.html"><i class="fas fa-tasks"></i> Tasks</a></li>
-          <li><a href="/chat.html"><i class="fas fa-comment-alt"></i> Chat</a></li>
-          <li><a href="/team.html"><i class="fas fa-users"></i> Team</a></li>
-        </ul>
-      </nav>
-    </aside>
-    <main>
-      <header class="main-header">
-        <div class="header-left">
-          <h2>Dashboard</h2>
-        </div>
-        <div class="header-right">
-          <a href="create-project.html" class="btn btn-primary">Create Project</a>
-          <div class="user-account">
-            <div class="user-image"><div class="image-container"><img src="images/logo.png" alt=""></div></div>
-            <div class="user-name">Cloud</div>
+    <nav>
+      <div class="container">
+        <div class="top-navbar">
+          <div class="top-navbar-left">
+            <a href="/" class="logo"></a>
+            <div class="search-bar"></div>
+          </div>
+          <div class="top-navbar-right">
+            <a href="create-project.html" class="btn btn-primary">Create Project</a>
+            <div class="user-account">
+              <div class="user-image"><div class="image-container"><img src="images/logo.png" alt=""></div></div>
+              <div class="user-name">Cloud</div>
+            </div>
           </div>
         </div>
-      </header>
-      <section class="main-content">
-        <div class="content-container">
-          <div class="projects-grid">
-            <a href="/project.html" class="project-card">
-              <h3 class="title">My First Project</h3>
-              <div class="project-details">
-                <div class="period">
-                  <div class="start-date">
-                    <i class="fas fa-calendar"></i>
-                    Start: <span>Sep 29</span>
+      </div>
+    </nav>
+    <main>
+      <aside>
+        <nav>
+          <ul>
+            <li><a href="/" class="active"><i class="fas fa-home"></i>Dashboard</a></li>
+            <li><a href="/tasks.html"><i class="fas fa-tasks"></i> Tasks</a></li>
+            <li><a href="/chat.html"><i class="fas fa-comment-alt"></i> Chat</a></li>
+            <li><a href="/team.html"><i class="fas fa-users"></i> Team</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <section>
+        <header>
+          <h1>Tasks</h1>
+        </header>
+        <section class="main-content">
+          <div class="content-container">
+            <div class="projects-grid">
+              <a href="/project.html" class="project-card">
+                <h3 class="title">My First Project</h3>
+                <div class="project-details">
+                  <div class="period">
+                    <div class="start-date">
+                      <i class="fas fa-calendar"></i>
+                      Start: <span>Sep 29</span>
+                    </div>
+                    <div class="end-date">
+                      <i class="fas fa-check-square"></i>
+                      End: <span>Sep 30</span>
+                    </div>
                   </div>
-                  <div class="end-date">
-                    <i class="fas fa-check-square"></i>
-                    End: <span>Sep 30</span>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 10%;"></div>
                   </div>
                 </div>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 10%;"></div>
-                </div>
-              </div>
-            </a>
-            <div class="project-card">
-              <h3 class="title">My First Project</h3>
-              <div class="project-details">
-                <div class="period">
-                  <div class="start-date">
-                    <i class="fas fa-calendar"></i>
-                    Start: <span>Sep 29</span>
+              </a>
+              <div class="project-card">
+                <h3 class="title">My First Project</h3>
+                <div class="project-details">
+                  <div class="period">
+                    <div class="start-date">
+                      <i class="fas fa-calendar"></i>
+                      Start: <span>Sep 29</span>
+                    </div>
+                    <div class="end-date">
+                      <i class="fas fa-check-square"></i>
+                      End: <span>Sep 30</span>
+                    </div>
                   </div>
-                  <div class="end-date">
-                    <i class="fas fa-check-square"></i>
-                    End: <span>Sep 30</span>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 10%;"></div>
                   </div>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 10%;"></div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="aside-container">
-          <div class="team-view">
-            <h4>Team</h4>
+          <div class="aside-container">
+            <div class="team-view">
+              <h4>Team</h4>
+            </div>
           </div>
-        </div>
+        </section>
       </section>
     </main>
   </div>

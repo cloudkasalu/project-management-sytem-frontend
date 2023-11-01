@@ -93,24 +93,79 @@ input,textarea,select{
   font-size: 15px;
 }
 
-.app{
-  display: flex;
-  column-gap: 2rem;
-  width: 100%;
-  height: 100vh;
+// .app{
+//   display: flex;
+//   column-gap: 2rem;
+//   width: 100%;
+//   height: 100vh;
 
-  &>*{
-    height: 100%;
-    padding: 1rem 0;
+//   &>*{
+//     height: 100%;
+//     padding: 1rem 0;
+//   }
+// }
+// .app aside{
+//   width: 20%;
+//   box-shadow: 0px 0px 25px rgba(73, 80, 87, 0.10);
+// }
+
+
+.app{
+
+  main{
+    display: flex;
+    justify-content: space-between;
   }
-}
-.app aside{
+
+  aside {
   width: 20%;
   box-shadow: 0px 0px 25px rgba(73, 80, 87, 0.10);
+  background-color: #ffffff;
+
+    nav{
+      margin-top: 2rem;
+      &::before{
+        content: "Navigation";
+        margin-left: 2rem;
+        font-size: 14px;
+      }
+    }
+    nav ul li a{
+      padding: 1rem 0;
+      display: block;
+      padding-left: 2rem;
+      &.active{
+        background-color: #F9F9FA;
+      }
+      &:hover{
+        background-color: #F9F9FA;
+      }
+        i{
+          font-size: 17px;
+          margin-right: .7rem;
+        }
+    }
+    
+  }
+
+  section{
+    padding: 2rem;
+    width: 80%;
+    background-color: #f8f8f8;
+  }
+
 }
 
-.app aside {
-  .brand{
+.top-navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: #2929cc;
+
+  .logo{
     display: flex;
     align-items: center;
     height: 70px;
@@ -118,51 +173,12 @@ input,textarea,select{
     font-size: 28px;
     font-weight: 600;
   }
-  nav{
-    margin-top: 2rem;
-    &::before{
-      content: "Navigation";
-      margin-left: 2rem;
-      font-size: 14px;
-    }
-  }
-  nav ul li a{
-    padding: 1rem 0;
-    display: block;
-    padding-left: 2rem;
-    &.active{
-      background-color: #F9F9FA;
-    }
-    &:hover{
-      background-color: #F9F9FA;
-    }
-      i{
-        font-size: 17px;
-        margin-right: .7rem;
-      }
-  }
-  
-}
-
-
-.app main{
-  width: 80%;
-}
-
-.main-header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 70px;
-  margin-bottom: 2rem;
-  padding-right: 2rem;
 
   .header-left{
 
   }
 
-  .header-right{
+  .top-navbar-right{
     display: flex;
     column-gap: 1rem;
     align-items: center;
