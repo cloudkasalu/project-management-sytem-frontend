@@ -28,7 +28,10 @@
           <div class="top-navbar">
             <div class="top-navbar-left">
               <div class="search-bar">
-                <input type="text" placeholder="Search">
+                <input type="text" class="search-field" placeholder="Search">
+                <button type="submit" class="search-button">
+                  <img src="/images/Search.svg" alt="">
+               </button>
               </div>
             </div>
             <div class="top-navbar-right">
@@ -43,21 +46,34 @@
       </nav>
       <section>
         <div class="chat-container">
-            <div class="chat-list content-modal">
+            <div class="chat-list-container content-modal">
                 <header>
                     <h2>Chat</h2>
                 </header>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search">
+                <div class="search">
+                  <input type="text" class="search-field" placeholder="Search">
                 </div>
                 <div class="chat-list">
-                    <div class="chat-list-item">
-
-
+                    <div class="chat">
+                      <div class="receiver-image user-image">
+                        <div class="image-container">
+                          <img src="images/logo.png" alt="">
+                        </div>
+                      </div>
+                      <div class="chat-details">
+                        <div class="top">
+                          <div class="name"><h4>John Doe</h4></div>
+                          <div class="time">5:00</div>
+                        </div>
+                        <div class="bottom">
+                          <div class="message">Hello There</div>
+                          <div class="message-count">1</div>
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
-            <div class="chat-field">
+            <div class="chat-field-container">
                 <div class="chat-header">
                     <div class="chat-header-user">
                         <div class="user-image">
@@ -66,13 +82,64 @@
                             </div>
                         </div>
                         <div class="user-name">
-                            <h4>Aitana </h4>
+                            <h4>Cloud Kasalu</h4>
+                            <div class="user-status">Online</div>
                         </div>
                     </div>
                     <div class="chat-head-options">
-
+                      <img src="images/more-vertical.svg" alt="">
                     </div>
                 </div>
+                <div class="chat-field">
+                  <div class="chat-blob receiver">
+                    <div class="user-image user-receiver">
+                      <div class="image-container">
+                        <img src="images/logo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="receiver-message message">
+                      <p>Hi There..</p>
+                    </div>
+                  </div>
+                  <div class="chat-blob sender">
+                    <div class="sender-message message">
+                      <p>Hi There, Who's This</p>
+                    </div>
+                    <div class="user-image user-sender">
+                      <div class="image-container">
+                        <img src="images/logo.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat-blob receiver">
+                    <div class="user-image user-receiver">
+                      <div class="image-container">
+                        <img src="images/logo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="receiver-message message">
+                      <p>Am your worst enemy, your worst nightmare. The very worst buddy, I am the one and only Cloud!!
+                      </p>
+                    </div>
+                  </div>
+                  <div class="chat-blob sender">
+                    <div class="sender-message message">
+                      <p>Yes, How can I Help You Please</p>
+                    </div>
+                    <div class="user-image user-sender">
+                      <div class="image-container">
+                        <img src="images/logo.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form class="chat-sender">
+                  <div class="attachment"><img src="/images/Paper.svg" alt=""><input type="file" name="attachment" id=""></div>
+                  <div class="textfield">
+                    <textarea name="message" id="" cols="30" rows="10">Write Your Message Here</textarea>
+                    <button type="submit"><img src="images/Send.svg" alt=""></button>
+                  </div>
+                </form>
             </div>
         </div>
       </section>

@@ -3,74 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
-  <title>Homepage</title>
+  <title>Dashboard</title>
+  <script defer src="/js/project.js"></script>
 </head>
 <body>
   <div class="app">
     <aside>
-      <div class="brand">PMS</div>
+      <div class="logo">PMS</div>
       <nav>
         <ul>
-          <li><a href="/" class="active"><i class="fas fa-home"></i>Dashboard</a></li>
-          <li><a href="/tasks.html"><i class="fas fa-tasks"></i> Tasks</a></li>
-          <li><a href="/chat.html"><i class="fas fa-comment-alt"></i> Chat</a></li>
-          <li><a href="/team.html"><i class="fas fa-users"></i> Team</a></li>
+          <li><a href="/" class="active"> <img src="/images/Category.svg" class="nav-icon" alt="Dashboard"> <span>Dashboard</span></a></li>
+          <li><a href="/tasks.html"> <img src="/images/Tick Square.svg" class="nav-icon" alt="Tasks"> <span>Tasks</span></a></li>
+          <li><a href="/chat.html"> <img src="/images/Chat.svg" class="nav-icon" alt="Chat Icon"> <span>Chat</span></a></li>
+          <li><a href="/team.html"> <img src="/images/User.svg" class="nav-icon" alt="Team"> <span>Team</span></a></li>
         </ul>
       </nav>
     </aside>
     <main>
-      <header class="main-header">
-        <div class="header-left">
-          <!-- <h2>Dashboard</h2> -->
-        </div>
-        <div class="header-right">
-          <a href="create-project.html" class="btn btn-primary">Create Project</a>
-          <div class="user-account">
-            <div class="user-image"><div class="image-container"><img src="images/logo.png" alt=""></div></div>
-            <div class="user-name">Cloud</div>
-          </div>
-        </div>
-      </header>
-      <section class="main-content">
-        <div class="project-container">
-          <div class="project-header project-card">
-                <div class="project-details">
-
-                </div>
+      <nav>
+        <div class="container">
+          <div class="top-navbar">
+            <div class="top-navbar-left">
+              <div class="search-bar">
+                <input type="text" class="search-field" placeholder="Search">
+                <button type="submit" class="search-button">
+                  <img src="/images/Search.svg" alt="">
+               </button>
               </div>
-              <section class="project-tracking">
-                  <div class="milestones-section">
-                    <div class="milestones-container">
-                      <div class="milestones-header">
-                        <h3 class="milestones-title">Milestones</h3>
-                      </div>
-                      <ul class="milestones-list">
-                      </ul>
-                    </div>
-                      <a class="add-milestone-link" href="">
-                      <button class="btn btn-primary">Add Milestone</button>
-                      </a>
-
-                    </div>
-                    <div class="tasks-section">
-                      <div class="tasks-header">
-                        <h3>Tasks</h3>
-                      </div>
-                      <ul class="tasks-list">
-                    
-                        
-                      </ul>
-                      <a class="add-task-link" href="">
-                      <button class="add-task-btn btn btn-primary">Add Task</button>
-                      </a>
-                    </div>
-              </section>
+            </div>
+            <div class="top-navbar-right">
+              <a href="create-project.html" class="btn btn-primary">Create Project</a>
+              <div class="user-account">
+                <div class="user-image"><div class="image-container"><img src="images/logo.png" alt=""></div></div>
+                <div class="user-name">Cloud</div>
+              </div>
+            </div>
           </div>
+        </div>
+      </nav>
+      <section>
+        <!-- <header class="main-header">
+          <h1>Dashboard</h1>
+        </header> -->
+        <section class="project">
+          <div class="project-header project-card">
+            <div class="project-details">
+
+            </div>
+         </div>
+          <div class="project-container">
+                <section class="project-tracking">
+                    <div class="milestones-section">
+                      <div class="milestones-container">
+                        <div class="milestones-header">
+                          <h3 class="milestones-title">Milestones</h3>
+                        </div>
+                        <ul class="milestones-list">
+                        </ul>
+                      </div>
+                        <a class="add-milestone-link" href="">
+                        <button class="btn btn-primary">Add Milestone</button>
+                        </a>
+  
+                      </div>
+                      <div class="tasks-section">
+                        <div class="tasks-container">
+                          <div class="tasks-header">
+                            <h3>Tasks</h3>
+                          </div>
+                          <ul class="tasks-list">
+                          
+                          </ul>
+                        </div>
+                        <a class="add-task-link" href="">
+                        <button class="add-task-btn btn btn-primary">Add Task</button>
+                        </a>
+                      </div>
+                </section>
+            </div>
+        </section>
       </section>
     </main>
   </div>
-  <script src="/js/project.js"></script>
 </body>
 </html>

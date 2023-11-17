@@ -3,44 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
-  <title>Home</title>
+  <title>Dashboard</title>
 </head>
 <body>
-  <aside>
-    <nav>
-      <ul>
-        <li><a href="/" class="active"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="/tasks"><i class="fas fa-tasks"></i> Tasks</a></li>
-        <li><a href="/team"><i class="fas fa-users"></i> Team</a></li>
-      </ul>
-    </nav>
-  </aside>
-  <main>
-    <!-- Main content goes here -->
-
-      <header>
-        <h1>Users</h1>
-        <a href="/create-user.html">
-            <button>Create User</button>
-        </a>
-      </header>
-    
-      <table class="content-table blogs-table">
-        <tr class="table-head table-grid">
-            <th>Fullname</th>
-            <th>Email</th>
-            <th>Role</th>
-        </tr>
-        <tr class="table-grid">
-            <td>Web Development</td>
-            <td>John Doe</td>
-            <td>26/07/2023</td>
-        </tr>
-      </table>
-    
-      <script src="script.js"></script>
-  </main>
+  <div class="app">
+    <aside>
+      <div class="logo">PMS</div>
+      <nav>
+        <ul>
+          <li><a href="/" class="active"> <img src="/images/Category.svg" class="nav-icon" alt="Dashboard"> <span>Dashboard</span></a></li>
+          <li><a href="/tasks.html"> <img src="/images/Tick Square.svg" class="nav-icon" alt="Tasks"> <span>Tasks</span></a></li>
+          <li><a href="/chat.html"> <img src="/images/Chat.svg" class="nav-icon" alt="Chat Icon"> <span>Chat</span></a></li>
+          <li><a href="/team.html"> <img src="/images/User.svg" class="nav-icon" alt="Team"> <span>Team</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <nav>
+        <div class="container">
+          <div class="top-navbar">
+            <div class="top-navbar-left">
+              <div class="search-bar">
+                <input type="text" class="search-field" placeholder="Search">
+                <button type="submit" class="search-button">
+                  <img src="/images/Search.svg" alt="">
+               </button>
+              </div>
+            </div>
+            <div class="top-navbar-right">
+              <a href="create-project.html" class="btn btn-primary">Create Project</a>
+              <div class="user-account">
+                <div class="user-image"><div class="image-container"><img src="images/logo.png" alt=""></div></div>
+                <div class="user-name">Cloud</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section>
+        <header class="main-header">
+          <h1>Team Members</h1>
+        </header>
+        <section class="main-content">
+          <div class="content-container">
+            <div class="users content-modal">
+              <header class="users-header">
+                <h3>Members</h3>
+                <button type="button" class="btn">Add Member</button>
+              </header>
+              <table class="content-table users-table">
+                <tr class="table-head table-grid">
+                    <th><input type="checkbox"></th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+                <tr class="table-grid">
+                    <td><input type="checkbox"></td>
+                    <td><div class="user-head"><div class="user-image"><div class="image-container"><img src="images/logo.png" alt=""></div></div><span>John Doe</span></div></td>
+                    <td>Editor</td>
+                    <td>johndoe@mail.com</td>
+                    <td class="table-action">
+                        <button class="btn btn-small btn-primary">Edit</button>
+                        <button class="btn btn-small btn-secondary">Delete</button>
+                    </td>
+                </tr>
+            </table>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

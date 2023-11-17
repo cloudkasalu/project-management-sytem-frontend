@@ -42,12 +42,12 @@ const data = async () => {
         <h2 class="project-title">${project.project_name}</h2>
         <div class="period">
         <div class="start-date">
-          <i class="fas fa-calendar"></i>
-          Start: <span>${project.start_date}</span>
+          <img src="/images/Calendar.svg"  alt="Calendar">
+          Start: <span>${formatDate(project.start_date)}</span>
         </div>
         <div class="end-date">
-          <i class="fas fa-check-square"></i>
-          End: <span>${project.end_date}</span>
+           <img src="/images/square-tick.svg" " alt="Checked">
+          End: <span>${formatDate(project.end_date)}</span>
         </div>
       </div>
         <div class="progress-bar">
@@ -130,3 +130,21 @@ const data = async () => {
 data();
 
 
+function formatDate(date){
+
+  const monthAbbreviations = [
+    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+  ];
+  
+  const specificDate = new Date(date);
+  
+  const month = monthAbbreviations[specificDate.getMonth()];
+  const day = specificDate.getDate();
+  
+  const formattedDate = `${month} ${day}`;
+  return formattedDate;
+
+}
+
+// console.log(formattedDate); // Output: "Nov 18"
